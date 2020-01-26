@@ -12,8 +12,18 @@ public class CalendarController implements WeatherForecast.controller.ICommands 
             CalendarView calendarView = new CalendarView();
             calendarView.listAllDays(days);
         }
+
     public String[] getCommands() {
-        String[] commands = {"calendar"};
+        String[] commands = {"calendar", "forecast"};
         return commands;
     }
+
+    public void forecast() {
+        Calendar[] days = Utils.getDays();
+        CalendarView calendarView = new CalendarView();
+        calendarView.forecastAllDays(days);
+    }
+
+
+
         }

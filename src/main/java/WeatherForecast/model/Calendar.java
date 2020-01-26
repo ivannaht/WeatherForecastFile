@@ -8,7 +8,6 @@ public class Calendar {
     private String date;
     private Weather[] conditions;
 
-
     public Calendar() {
     }
 
@@ -44,27 +43,32 @@ public class Calendar {
 
     @Override
     public String toString() {
-        return "Calendar{"+
-                "nameOfday=" + nameOfday+
-                ", date=" + date + '\'' +
-        "conditions=" + Arrays.toString(conditions)+
+        return "Forecast{" +
+                "nameOfday=" + nameOfday +
+                ", date=" + date  +
+                ", conditions=" + Arrays.toString(conditions) +
                 '}';
+    }
+        @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Calendar)) return false;
+        Calendar calendar = (Calendar) o;
+        return Objects.equals(nameOfday, calendar.nameOfday) &&
+                Objects.equals(date, calendar.date) &&
+                Arrays.equals(conditions, calendar.conditions);
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Calendar calendar = (Calendar) o;
-        return Arrays.equals(conditions, calendar.conditions) &&
-                Objects.equals(nameOfday,calendar.nameOfday) &&
-                Objects.equals(date, calendar.date);
-}
-
-    @Override
     public int hashCode() {
-        int result = Objects.hash(nameOfday, date);
+        int result = Objects.hash(nameOfday, date );
         result = 31 * result + Arrays.hashCode(conditions);
         return result;
     }
 }
+
+
+
+
+
+

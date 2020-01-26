@@ -1,16 +1,10 @@
 package WeatherForecast;
 
-import WeatherForecast.Utils.Utils;
 import WeatherForecast.controller.CalendarController;
 import WeatherForecast.controller.WeatherController;
-import WeatherForecast.model.Calendar;
-import WeatherForecast.model.Weather;
 import WeatherForecast.view.GeneralView;
 
 import java.util.Scanner;
-
-import static WeatherForecast.Utils.Utils.getDays;
-import static WeatherForecast.Utils.Utils.getWeather;
 
 
 public class App
@@ -53,6 +47,9 @@ public class App
                     break;
                 case "list":
                     weatherController.list();
+                    break;
+                case "forecast":
+                    calendarController.forecast();
                     break;
                 case "exit":
                     generalView.bye();

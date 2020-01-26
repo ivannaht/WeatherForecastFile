@@ -28,17 +28,17 @@ public class Utils {
 
     public static Calendar[] getDays() {
             Weather[]  conditions1 = getWeather();
-            Weather[]  conditions2;
-        conditions2 = getWeather();
+            Weather[]  conditions2 = getWeather();
 
 
-        Calendar[] days = {
-                    new Calendar("Monday", "27.01.2020", conditions1),
-                    new Calendar("Tuesday", "28.01.2020", conditions2),
+
+        Calendar[] days = new Calendar[]{
+                new Calendar("Monday", "27.01.2020", conditions1),
+                        new Calendar("Tuesday", "28.01.2020",conditions2 )
         };
-
         return days;
-    }}
+    }
+}
 
 
 

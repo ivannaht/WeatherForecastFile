@@ -11,6 +11,17 @@ public class CalendarView {
             System.out.print(calendar.getNameOfday());
             System.out.println(" "+ calendar.getDate());
 
-               }
+               }}
+
+
+        public void forecastAllDays (Calendar[] days) {
+            for (Calendar calendar: days) {
+                if (calendar == null) {
+                    continue;
+                }
+                System.out.println(calendar);
+
+
+            }
 
 }}
