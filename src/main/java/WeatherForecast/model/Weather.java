@@ -3,7 +3,7 @@ package WeatherForecast.model;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Weather {
+public class Weather  implements Comparable<Weather>{
 
     private String maxТemperature;
     private String minТemperature;
@@ -92,4 +92,8 @@ public class Weather {
         return result;
     }
 
+    @Override
+    public int compareTo(Weather o) {
+        return Integer.compare(getWindSpeed(), o.getWindSpeed());
+    }
 }

@@ -44,8 +44,11 @@ public class Calendar {
 
     @Override
     public String toString() {
-        return "Calendar{"+" nameOfday=" + ", date=" + date + '\'' +
-        "conditions=" + Arrays.toString(conditions)+'}';
+        return "Calendar{"+
+                "nameOfday=" + nameOfday+
+                ", date=" + date + '\'' +
+        "conditions=" + Arrays.toString(conditions)+
+                '}';
     }
 
     @Override

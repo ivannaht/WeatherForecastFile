@@ -1,16 +1,19 @@
 package WeatherForecast;
 
+import WeatherForecast.Utils.Utils;
 import WeatherForecast.controller.CalendarController;
 import WeatherForecast.controller.WeatherController;
+import WeatherForecast.model.Calendar;
+import WeatherForecast.model.Weather;
 import WeatherForecast.view.GeneralView;
 
 import java.util.Scanner;
 
-/**
- * Hello world!
- *
- */
-public class App 
+import static WeatherForecast.Utils.Utils.getDays;
+import static WeatherForecast.Utils.Utils.getWeather;
+
+
+public class App
 {
     public static void main( String[] args )    {
 
@@ -33,19 +36,23 @@ public class App
 
         GeneralView generalView = new GeneralView();
 
-        String allCommands[] = {"exit", "?"};
+
+        String generalCommands[] = { "?", "exit"};
 
         while(isEnd) {
             System.out.println("Enter a command:");
             cmd = scanner.nextLine();
             switch (cmd) {
                     case "?":
-                    generalView.allCommands(allCommands);
+                    generalView.allCommands(generalCommands);
                     generalView.allCommands(weatherCommands);
                     generalView.allCommands(calendarCommands);
                     break;
                     case "calendar":
                     calendarController.list();
+                    break;
+                case "list":
+                    weatherController.list();
                     break;
                 case "exit":
                     generalView.bye();

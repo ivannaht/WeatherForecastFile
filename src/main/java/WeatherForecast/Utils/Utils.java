@@ -24,8 +24,7 @@ public class Utils {
             return conditions;
         }
 
-    public Utils() {
-    }
+
 
     public static Calendar[] getDays() {
             Weather[]  conditions1 = getWeather();
