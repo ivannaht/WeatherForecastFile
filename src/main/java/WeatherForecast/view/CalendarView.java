@@ -16,12 +16,14 @@ public class CalendarView {
 
         public void forecastAllDays (Calendar[] days) {
             for (Calendar calendar: days) {
-                if (calendar == null) {
-                    continue;
-                }
+               if (calendar == null) {
+                  continue;
+              }
                 System.out.println(calendar);
 
 
+
+    }
             }
 
-}}
+}
